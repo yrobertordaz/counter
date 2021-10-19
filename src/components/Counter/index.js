@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Buttons from "./components/Buttons";
 import List from "./components/List";
 
+
 const Counter = () => {
   const [counter, setCounter] = useState({ loading: false, items: [0] });
 
@@ -9,7 +10,7 @@ const Counter = () => {
     <div>
       <h1>Counter</h1>
       <div className="container">
-        <Buttons
+        <Buttons 
           up={() =>
             setCounter({
               loading: false,
@@ -31,6 +32,7 @@ const Counter = () => {
         />
         <List numbers={counter.items} loading={false} />
       </div>
+  
     </div>
   );
 };

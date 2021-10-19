@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+package-lock.json
+src/components/Navbar.jsx
+src/components/students/ButtonStudents.jsx
+src/components/students/ListStudents.jsx
+src/components/students/Students.jsx
