@@ -9,7 +9,7 @@ const List = (props) => {
       {props.loading === false && (
         <ul>
           {/** La variable se llama student no data, por eso props.data = undefined */}
-          {props.data.map((student) => {
+          {props.student.map((student) => {
             return <li key={student}>{student}</li>;
           })}
         </ul>

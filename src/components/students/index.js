@@ -13,34 +13,30 @@ const Students = () => {
     ],
   });
 
-  const ageIncrement = () => {
+ /* const ageIncrement = () => {
     // Cambiar la forma de actualizar el estado, recuerda lo del ...
     students.data.age = Math.random * 10;
-  };
+  };*///Alejandro, cambie el nombre de la funcion ageIncrement a add
+  const add = () => {
+    setStudent({loading:true, data:[{name: '', age: this.Maht.random()}]});
+  }
 
   // Codigo para eliminar estudiante
+  for(let i = 0; i < students.data.length; i++)
+  {
+     const arreglo  = students.data[i-1];
+  }
+  
+  
 
   return (
     <div className="row">
       <div className="col">
         <span> Yansel</span>
         <ButtonStudents
-          up={() =>
-            setStudent({
-              loading: false,
-              data: [
-                ...students.data,
-                // Esta parte esta mal porque tienes que pasar el objeto directamente
-                students.data[{ name: "El florero", age: ageIncrement }],
-              ],
-            })
-          }
-          down={() =>
-            setStudent({
-              loading: false,
-              data: [...students.data, students.data.length - 1],
-            })
-          }
+          up={() => add}
+         
+          down={this.arreglo}
         />
       </div>
       <div className="col">
