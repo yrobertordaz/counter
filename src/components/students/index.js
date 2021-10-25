@@ -10,45 +10,37 @@ const Students = () => {
     loading: false,
     data: [
       {
-        name: "El florero",
+        name: '',
         age: 0,
       },
     ],
   });
 
- /* const ageIncrement = () => {
-    // Cambiar la forma de actualizar el estado, recuerda lo del ...
-    students.data.age = Math.random * 10;
-  };*///Alejandro, cambie el nombre de la funcion ageIncrement a add
-  const add = () => {
-    // En los componentes funcionales no se utiliza this, Math está mal escrito
-    // Con esto vas a perder los demás elementos que tengas en students.data, revisa la forma en que adicionas el nuevo student, usa el ...
-    setStudent({loading:true, data:[{name: '', age: this.Maht.random()}]});
-  }
-
-  // Codigo para eliminar estudiante
-  for(let i = 0; i < students.data.length; i++)
-  {
-    /**
-     * Esto no está bien, declaras la constante arreglo para luego destruirla en la proxima iteración.
-     * No olvides que estás dentro de una función.
-     */
-     const arreglo  = students.data[i-1];
-  }
   
-  
+  //Corrigeme la funcion, dime si la logica esta bien y luego si en el props del componente ButtonsStudents esta
+  //hecha la llamada de la funcion y la logica en general
+  const ageRandom = () =>{
+    let min = 0;
+    let age = Math.floor(Math.random() * (100-min))+min;
+    min +=1;
+    return age;
+  }
 
   return (
+
     <div className="row">
       <div className="col">
         <ButtonStudents
-          up={() => add}
-         {/** En los componentes funcionales no se utiliza this */}
-          down={this.arreglo}
-        />
+         up ={() => setStudent({
+            loading: false, 
+            data: [...students.data,students.data[{name: 'El florero', age: ()=> ageRandom}]]})}
+         />
       </div>
+
       <div className="col">
-        <ListStudents loading={students.loading} student={students.data} />
+        <ListStudents
+          loading={students.loading} 
+          student={students.data} />
       </div>
     </div>
   );

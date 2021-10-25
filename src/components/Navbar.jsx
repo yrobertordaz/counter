@@ -11,7 +11,8 @@ const Navbar = ()=>{
             </div>
             <div className = "col md-4">
                 <Link className = "btn btn-primary" to = '/students'>Students</Link>
-            </div>    
+            </div>
+         
         </div>
        </div>
     );

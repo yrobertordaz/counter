@@ -1,4 +1,4 @@
-const List = (props) => {
+const ListStudents = (props) => {
   return (
     <div>
       {props.loading === true && (
@@ -8,16 +8,14 @@ const List = (props) => {
       )}
       {props.loading === false && (
         <ul>
-          {/** Recuerda que student es un arreglo de objetos, así que si quieres mostrar en el mostrar algo en el DOM tienes que referirte
-           * de la siguiente manera student.name o student.age.
-           */}
-          {props.student.map((student) => {
-            // Esta linea está mal por lo que explico arriba, debes mostrar en el DOM valores escalares. student.name o student.age
-            return <li key={student}>{student}</li>;
+            {props.student.map((st) => {
+            return(
+            <li key = {st.id}>{st.name}</li>,
+            <li key = {st.id}>{st.age}</li>)        
           })}
         </ul>
       )}
     </div>
   );
 };
-export default List;
+export default ListStudents;
