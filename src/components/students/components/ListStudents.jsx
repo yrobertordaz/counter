@@ -8,10 +8,10 @@ const ListStudents = (props) => {
       )}
       {props.loading === false && (
         <ul>
-            {props.student.map((st) => {
-            return(
-            <li key = {st.id}>{st.name}</li>,
-            <li key = {st.id}>{st.age}</li>)        
+          {props.student.map((st) => {
+            return (
+              (<li key={st.id}>{st.name}</li>), (<li key={st.id}>{st.age}</li>)
+            );
           })}
         </ul>
       )}
