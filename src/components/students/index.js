@@ -17,25 +17,29 @@ const Students = () => {
   });
 
   
-  //Corrigeme la funcion, dime si la logica esta bien y luego si en el props del componente ButtonsStudents esta
-  //hecha la llamada de la funcion y la logica en general
-  const ageRandom = () =>{
-    let min = 0;
-    let age = Math.floor(Math.random() * (100-min))+min;
-    min +=1;
-    return age;
-  }
-
   return (
 
     <div className="row">
       <div className="col">
+        {/** Cree una funcion dentro del props, ya funciona y lo unico que creo es que era algo tan bobo como incomodo de 
+         * ver a la vista
+         */}
         <ButtonStudents
-         up ={() => setStudent({
+         up ={() => {
+          let min = 0;
+          let age = Math.floor(Math.random() * (100-min))+min;
+          
+          
+          setStudent({
             loading: false, 
             data: 
               [...students.data,
-              [{name: 'El florero', age: ageRandom}]]})}
+              {name: 'El florero', age: age}]});
+              min +=1;
+            }
+                  
+         }
+         
          />
       </div>
 
