@@ -33,7 +33,9 @@ const Students = () => {
         <ButtonStudents
          up ={() => setStudent({
             loading: false, 
-            data: [...students.data,students.data[{name: 'El florero', age: ()=> ageRandom}]]})}
+            data: 
+              [...students.data,
+              [{name: 'El florero', age: ageRandom}]]})}
          />
       </div>
 
