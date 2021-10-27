@@ -20,6 +20,7 @@ const ListStudents = (props) => {
               <tr key = {index}>
               <th scope="row">{index + 1}</th>
               <td>{st.name}</td>
+              <td>   </td>
               <td>{st.age}</td>
               
             </tr> )    
