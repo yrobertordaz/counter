@@ -7,12 +7,25 @@ const ListStudents = (props) => {
         </ul>
       )}
       {props.loading === false && (
-        <ul>
+        <table>
+           <thead>
+            <tr>
+              <th scope="col">Nombre</th>
+              <th scope="col">Edad</th>
+            </tr>
+          </thead>
+          <tbody>
             {props.student.map((st, index) => {
             return(
-            <li key = {index}>{st.name}  {st.age} </li>)        
+              <tr key = {index}>
+              <th scope="row">{index + 1}</th>
+              <td>{st.name}</td>
+              <td>{st.age}</td>
+              
+            </tr> )    
           })}
-        </ul>
+          </tbody>
+        </table>
       )}
     </div>
   );

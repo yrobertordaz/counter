@@ -32,10 +32,7 @@ const Students = () => {
           let name = ["Alejandro", "Claudya", "Alberto", "Ernesto","Fernando", "Jorge", "Julian", "Anay"];
           let index = Math.floor(Math.random()*name.length)
           let resultName = name[index];
-
-          console.log(resultName, age);
           
-
           setStudent({
             loading: false, 
             data: 
@@ -44,6 +41,18 @@ const Students = () => {
               min +=1;
             }
                   
+         }
+
+         down = {() =>{
+            let index = students.data.length;
+            students.data.splice(-1);
+            
+            setStudent({
+              loading: false,
+              data: students.data
+            })
+           
+          }
          }
          
          />
