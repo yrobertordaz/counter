@@ -29,12 +29,18 @@ const Students = () => {
           let min = 0;
           let age = Math.floor(Math.random() * (100-min))+min;
           
+          let name = ["Alejandro", "Claudya", "Alberto", "Ernesto","Fernando", "Jorge", "Julian", "Anay"];
+          let index = Math.floor(Math.random()*name.length)
+          let resultName = name[index];
+
+          console.log(resultName, age);
           
+
           setStudent({
             loading: false, 
             data: 
               [...students.data,
-              {name: 'El florero', age: age}]});
+              {name: resultName, age: age}]});
               min +=1;
             }
                   
